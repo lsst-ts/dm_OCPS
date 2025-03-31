@@ -21,6 +21,7 @@
 __all__ = ["OcpsCsc", "run_ocps", "CONFIG_SCHEMA"]
 
 import asyncio
+import enum
 import json
 import logging
 import os
@@ -32,7 +33,6 @@ import redis
 import requests  # type: ignore
 import yaml
 from lsst.ts import salobj
-from lsst.ts.idl.enums.OCPS import SalIndex
 from lsst.ts.utils import current_tai
 
 from . import __version__
@@ -96,6 +96,18 @@ additionalProperties: false
 DONE_PHASES = ["completed", "error", "aborted", "unknown"]
 
 
+# TODO: (DM-49793) Replace this with enum from ts-xml
+# once enum is updated to include RA.
+class SalIndex(enum.IntEnum):
+    """Allowed SAL indices."""
+
+
+    LATISS = 1
+    LSSTComCam = 2
+    LSSTCam = 3
+    RA = 101
+
+
 class OcpsCsc(salobj.ConfigurableCsc):
     """CSC for the OCS-Controlled Pipeline Service.
 
@@ -103,7 +115,7 @@ class OcpsCsc(salobj.ConfigurableCsc):
 
     Parameters
     ----------
-    index: `int` or `lsst.ts.idl.enums.OCPS.SalIndex`
+    index: `int` or `SalIndex`
         CSC SAL index.
     simulation_mode: `int` (optional)
         Simulation mode.
