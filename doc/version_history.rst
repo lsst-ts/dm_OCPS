@@ -61,3 +61,8 @@ v4.3.0
   The index based implementation means that the CSC will run in Rapid Analysis mode only if it is running with a specific set of indices.
   For now, this is only index=101.
 
+v4.4.0
+======
+
+* Fix version handling.
+
