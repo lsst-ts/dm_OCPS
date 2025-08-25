@@ -1,0 +1,2 @@
+@Library('JenkinsShared')_
+CondaPipeline(["dm_config_ocps"], "dm-ocps", "lsst.dm.OCPS", "noarch")
