@@ -32,8 +32,8 @@ import redis
 import requests  # type: ignore
 import yaml
 from lsst.ts import salobj
-from lsst.ts.xml.enums.OCPS import SalIndex
 from lsst.ts.utils import current_tai
+from lsst.ts.xml.enums.OCPS import SalIndex
 
 from . import __version__
 
