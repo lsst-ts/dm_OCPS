@@ -32,8 +32,8 @@ import redis
 import requests  # type: ignore
 import yaml
 from lsst.ts import salobj
-from lsst.ts.idl.enums.OCPS import SalIndex
 from lsst.ts.utils import current_tai
+from lsst.ts.xml.enums.OCPS import SalIndex
 
 from . import __version__
 
@@ -103,7 +103,7 @@ class OcpsCsc(salobj.ConfigurableCsc):
 
     Parameters
     ----------
-    index: `int` or `lsst.ts.idl.enums.OCPS.SalIndex`
+    index: `int` or `lsst.ts.xml.enums.OCPS.SalIndex`
         CSC SAL index.
     simulation_mode: `int` (optional)
         Simulation mode.

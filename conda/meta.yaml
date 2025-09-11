@@ -16,7 +16,7 @@ test:
   requires:
     - ts-conda-build =0.4
     - redis-py
-    - ts-idl {{ idl_version }}
+    - ts-xml {{ xml_version }}
     - ts-salobj {{ salobj_version }}
   source_files:
     - python
@@ -38,5 +38,5 @@ requirements:
     - setuptools
     - setuptools_scm
     - redis-py
-    - ts-idl
+    - ts-xml
     - ts-salobj
