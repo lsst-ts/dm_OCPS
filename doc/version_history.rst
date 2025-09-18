@@ -66,3 +66,12 @@ v4.4.0
 
 * Fix version handling.
 
+v4.5.0
+======
+
+* Enum check handles RA OCPS.
+
+v4.5.1
+======
+
+* Fixup remaining IDL package references.
