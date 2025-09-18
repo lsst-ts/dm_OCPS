@@ -29,7 +29,7 @@ This is a pure python package. There is nothing to build except the documentatio
 
 .. code-block:: bash
 
-    make_idl_files.py OCPS
+    create_topics OCPS
     setup -r .
     pytest -v  # to run tests
     package-docs clean; package-docs build  # to build the documentation

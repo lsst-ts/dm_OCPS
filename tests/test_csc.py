@@ -30,7 +30,7 @@ import redis
 import yaml
 from lsst.dm import OCPS
 from lsst.ts import salobj
-from lsst.ts.idl.enums.OCPS import SalIndex
+from lsst.ts.xml.enums.OCPS import SalIndex
 
 STD_TIMEOUT = 2  # standard command timeout (sec)
 TEST_CONFIG_DIR = pathlib.Path(__file__).parents[1].joinpath("tests", "data", "config")
